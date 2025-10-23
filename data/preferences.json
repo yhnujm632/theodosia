@@ -1,0 +1,18 @@
+{
+    "api_urls": {
+        "latest_articles": "https://content.guardianapis.com/search?show-fields=bodyText,standfirst&page=%p&api-key=DEFAULT_API_KEY",
+        "search_by_section": "https://content.guardianapis.com/search?show-fields=bodyText,standfirst&section=%s&page=%p&api-key=DEFAULT_API_KEY"
+    },
+    "paths": {
+        "latest_articles": {
+            "title": "$.response.results[*].webTitle",
+            "body_text": "$.response.results[*].fields.bodyText"
+        },
+        "search_by_section": {
+            "title": "$.response.results[*].webTitle",
+            "body_text": "$.response.results[*].fields.bodyText"
+        }
+    },
+    "attribution": false,
+    "statement": ""
+}

@@ -2,15 +2,15 @@ import pyaudio
 import wave
 import time
 from math import ceil, floor
-from numpy import sqrt, mean, frombuffer, int32
+from numpy import sqrt, mean, frombuffer, int16
 
 class EzRecord:
-    def __init__(self, filename="recording.wav", graphic_output=True, audio_format=pyaudio.paInt32, channels=2, rate=44100, chunk=6144):
+    def __init__(self, filename="recording.wav", graphic_output=True, audio_format=pyaudio.paInt16, channels=2, rate=44100, chunk=6144):
 
         # Initialize self._pyaudio_object -- it will be the object that plays the generated audio
         self.pyaudio_object = pyaudio.PyAudio()
 
-        # Set the audio format - paInt32 is the setting I use
+        # Set the audio format - paInt16 is the setting I use
         self.format = audio_format
 
         # Set the channels - usually 2, because we want dual-channel audio
@@ -30,7 +30,8 @@ class EzRecord:
 
     def _calc_volume(self, data, width=2):
         # Based off of the RMS formula for calculating volume
-        return int(sqrt(mean(pow(frombuffer(data, int32).astype(float), 2))) / 33333)
+        print(int(sqrt(mean(pow(frombuffer(data, int16).astype(float), 2))) / 16))
+        return int(sqrt(mean(pow(frombuffer(data, int16).astype(float), 2))) / 16)
 
     def _write_to_wav(self, audio_frames):
         with wave.open(self.filepath, 'wb') as wav_file:

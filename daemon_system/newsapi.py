@@ -4,7 +4,7 @@ import json
 class NewsAPI:
     def __init__(self):
         # I'm keeping the API key in one place for security
-        self.default_api_key = "08bb310b-cc38-49ed-b0f6-851be65d2d11"
+        self.default_api_key = "API_KEY"
 
         try:
             # Open the JSON preferences file if it exists
@@ -109,4 +109,5 @@ class NewsAPI:
                 return "latest_articles"
             case "search articles by section" | "a different section" | "next page of section" | "current page of section":
                 return "search_by_section"
+
         return ""

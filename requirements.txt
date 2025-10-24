@@ -1,0 +1,6 @@
+jsonpath_ng==1.7.0
+numpy==1.26.4
+PyAudio==0.2.14
+Requests==2.32.5
+speechrecognition==3.14.3
+transformers==4.55.3

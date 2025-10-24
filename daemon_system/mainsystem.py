@@ -155,12 +155,12 @@ class MainSystem:
             You can also reread this current page of latest articles or search articles by section.
             Or, you can be done.
             """.replace("\n", " ").replace("    ", " ").strip()
-            main_question = "Which do you prefer: next page of latest, current page of latest, search articles by section, or done?"
+            main_question = "Which do you prefer: next page of latest, current page of latest, search articles by section, or terminate?"
             options = [
                 "next page of latest articles",
                 "current page of latest articles",
                 "search articles by section",
-                "be done"
+                "terminate"
             ]
         # If the previous choice was to search articles by section, give the following options
         elif previous_choice == "search articles by section" or previous_choice == "a different section" or previous_choice == "next page of section" or previous_choice == "current page of section":
@@ -170,13 +170,13 @@ class MainSystem:
             You can also read the latest articles.
             Or, you can be done.
             """.replace("\n", " ").replace("    ", " ").strip()
-            main_question = "Which do you prefer: next page of section, current page of section, a different section, latest articles, or done?"
+            main_question = "Which do you prefer: next page of section, current page of section, a different section, latest articles, or terminate?"
             options = [
                 "next page of section",
                 "current page of section",
                 "a different section",
                 "latest articles",
-                "be done"
+                "terminate"
             ]
 
         # Ask the user to select
@@ -211,6 +211,8 @@ class MainSystem:
                 data = self.news_api.get_section_articles(page, section)
             case "current page of section":
                 data = self.news_api.get_section_articles(page, section)
+            case "terminate":
+                data = True
 
         # If an error ocurred the data will be set to False (or None)
         if not data:
@@ -232,7 +234,7 @@ class MainSystem:
         while True:
 
             # If the user wants to quit
-            if decision == "be done":
+            if decision == "terminate":
                 self.audio_print("OK, see you then.", False)
                 # Break out of the loop
                 break
@@ -284,6 +286,3 @@ class MainSystem:
     def press_enter(self):
         # When enter is pressed, set the boolean value in the Voice object to True. If audio is playing, it will now stop. Otherwise, this won't do anything.
         self.voice.enter_pressed = True
-
-
-

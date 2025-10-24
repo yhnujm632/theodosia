@@ -30,7 +30,6 @@ class EzRecord:
 
     def _calc_volume(self, data, width=2):
         # Based off of the RMS formula for calculating volume
-        print(int(sqrt(mean(pow(frombuffer(data, int16).astype(float), 2))) / 16))
         return int(sqrt(mean(pow(frombuffer(data, int16).astype(float), 2))) / 16)
 
     def _write_to_wav(self, audio_frames):

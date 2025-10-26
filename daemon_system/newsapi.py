@@ -4,7 +4,7 @@ import json
 class NewsAPI:
     def __init__(self):
         # I'm keeping the API key in one place for security
-        self.default_api_key = "test"
+        self.default_api_key = "test" # I have an actual API key, but I didn't want to actually put it on GitHub
 
         try:
             # Open the JSON preferences file if it exists
@@ -111,4 +111,5 @@ class NewsAPI:
                 return "search_by_section"
 
         return ""
+
 

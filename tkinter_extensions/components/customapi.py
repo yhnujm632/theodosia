@@ -11,7 +11,7 @@ class CustomAPI(tk.Toplevel):
         # Set the title of the window
         self.title("Import a Custom API")
         # Set the window icon
-        self.iconbitmap("C:/Users/josym/OneDrive/Development/Congressional App Challenge/Theodosia/cli/tkinter_extensions/icon_logo.ico")
+        self.iconbitmap("icon_logo.ico")
         # Edit the window commands so that when you "x" out it doesn't destroy the whole window, it just minimizes it
         self.protocol("WM_DELETE_WINDOW", self.withdraw)
 

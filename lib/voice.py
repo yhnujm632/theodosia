@@ -74,7 +74,7 @@ class Voice:
 
     def output(self, input_str, default_quit_audio=True, custom_quit=None, after=None):
         # Creates a Python subprocess to interact with the Piper TTS engine (this basically runs a command line prompt)
-        self._tts_subprocess = sp.Popen(['.\piper.exe', '--output-raw', '-m', self.piper_model_path], stdout=sp.PIPE, stdin=sp.PIPE, bufsize=0, creationflags=sp.CREATE_NO_WINDOW)
+        self._tts_subprocess = sp.Popen(['.\piper\piper.exe', '--output-raw', '-m', self.piper_model_path], stdout=sp.PIPE, stdin=sp.PIPE, bufsize=0, creationflags=sp.CREATE_NO_WINDOW)
         
         # Send the input string to the stdin (standard input) using PIPE
         # I wanted to just insert the input_str as another parameter in the inital subprocess, but apparently Windows has a character limit for commands

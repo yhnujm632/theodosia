@@ -41,6 +41,9 @@ A Python Tkinter app. It lets the user browse news, only requiring audio as inpu
 * **Psuedoterminal and Psuedoterminal I/O handling.** This sounds a lot more complicated than it actually is. It's basically controlling a terminal subprocess, determining the chunk sizes, setting up the standard input and output (STDIN/STDOUT) streams, etc.
 
 ## **Any important links?**
+* My personal website page for the app: https://mampuzha.org/theodosia/
+* YouTube demonstration (long version): https://www.youtube.com/watch?v=yPalMSkpB7Y
+* YouTube demonstration (short version): https://www.youtube.com/watch?v=gECAJe6qbkU
 
-
+## **Any other notes?**
 **The folder named "piper" is NOT my own work - it's a library that I use that is saved locally. It is the folder containing the piper.exe file. Piper is the library I use to stream text to audio. You can find the source code to the piper.exe file here: https://github.com/rhasspy/piper**

@@ -17,9 +17,9 @@ A Python Tkinter app. It lets the user browse news, only requiring audio as inpu
 ## **What is it made with?**
 **Programming languages:** Python
 
-**Standard Libraries:** `tkinter, time, threading, subprocess, os, sys, functools, wave, math, json, statistics`
+**Standard libraries:** `tkinter, time, threading, subprocess, os, sys, functools, wave, math, json, statistics`
 
-**Extra Libraries:** `jsonpath_ng, numpy, pyaudio, requests, speechrecognition, transformers`
+**Extra libraries:** `jsonpath_ng, numpy, pyaudio, requests, speechrecognition, transformers`
 
 **Other resources:** `piper.exe`, a text-to-speech program
 

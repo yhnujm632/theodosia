@@ -41,7 +41,7 @@ A Python Tkinter app. It lets the user browse news, only requiring audio as inpu
 * ***Object-oriented programming (OOP).*** Lots of it. I took AP Computer Science A this past year, and this was the perfect place to use OOP. I have broken up different tasks into lots and lots of different classes, mostly instance classes for this app.
 * ***UI design.*** I was kind of familiar with Tkinter, since I used it back in 7th grade, but I needed to refamiliarize myself for this app.
 * ***Audio formatting.*** Before this project, I had no idea what `pa.Int16` or `pa.Int32` meant. Nor that 44.1 kHz was considered the standard audio sample rate. I know that now.
-* ***Psuedoterminal and Psuedoterminal I/O handling.*** This sounds a lot more complicated than it actually is. It's basically controlling a terminal subprocess, determining the chunk sizes, setting up the standard input and output (STDIN/STDOUT) streams, etc.
+* ***Subprocess I/O handling.*** This sounds a lot more complicated than it actually is. It's basically controlling a terminal subprocess, determining the chunk sizes, setting up the standard input and output (STDIN/STDOUT) streams, etc.
 
 ## **Any important links?**
 * My personal website page for the app: https://mampuzha.org/theodosia/

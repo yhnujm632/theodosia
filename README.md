@@ -1,3 +1,6 @@
+[![Open Issues](https://img.shields.io/badge/open%20issues-0-green)](https://github.com/yhnujm632/theodosia/issues)
+[![License](https://img.shields.io/badge/license-The%20Unlicense-yellow)](https://github.com/yhnujm632/theodosia/blob/main/LICENSE)
+
 # Theodosia
 
 ## **What is it?**
